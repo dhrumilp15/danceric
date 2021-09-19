@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Eric {% endblock %}</h1>
+<form method="POST" action="/upload-image" enctype="multipart/form-data">
+    <p><input type="file" id="file" name="file"></p>
+    <select name="videos" method="POST" action="/upload-image">
+        {% for video in videos %}
+        <option value="{{video}}" SELECTED>{{video}}</option>"
+        {% endfor %}
+    </select>
+    <p><input type="submit" value="Submit"></p>
+</form>
+{% endblock %}

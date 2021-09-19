@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Eric {% endblock %}</h1>
+<video wdith="1280" height="720" controls style="margin-right: auto; margin-left: auto; align-items: center">
+    <source preload="auto" src={{url_for('static', filename=video)}} type="video/mp4">
+</video>
+{% endblock %}
